@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
     void StopScrolling()
     {
         TextureScroll[] scrollingObjects = FindObjectsOfType<TextureScroll>();
-
         foreach(TextureScroll item in scrollingObjects)
         {
             item.scroll = false;
