@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     string defaultText;
     int score = 0;
+    private string debugInStart = "in Start";
+    private string debugInUpdate = "in Update";
+    private string mainScene= "MainScene";
+    private string menuScene = "MenuScene";
+
 
     private void Awake()
     {
@@ -22,13 +27,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("in Start");   
+        Debug.Log(debugInStart);   
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("in Update");
+        Debug.Log(debugInUpdate);
     }
 
     public void GameOver()
@@ -50,12 +55,12 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(mainScene);
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene(menuScene);
     }
 
     public void IncrementScore()
